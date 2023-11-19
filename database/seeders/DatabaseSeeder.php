@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         Role::create(['name' => 'Admin']);
         Role::create(['name' => 'User']);
 
+        // Metode Bisa di sesuaikan dengan kebutuhan
         Metode::create([
             'name' => 'Konduktometri'
         ]);
@@ -56,6 +57,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Respirometric'
         ]);
 
+        // Category Parameter bisa disesuaikan dengan parameter/produk
         CategoryParameter::create([
             'name' => 'FISIKA'
         ]);
@@ -85,26 +87,5 @@ class DatabaseSeeder extends Seeder
         CategoryParameter::create([
             'name' => 'LOGAM'
         ]);
-
-        Home::create([
-            'title' => 'Came And Enjoy',
-            'user_id' => 1,
-            'title2' => 'Your Time',
-            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
-            exercitationem'
-        ]);
-
-        About::create([
-            'title' => 'TENTANG',
-            'title2' => 'KAMI',
-            'user_id' => 1,
-            'body' => 'Why This Brand ?',
-            'body2' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit saepe quibusdam accusantium accusamus reiciendis esse!'
-        ]);
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }
