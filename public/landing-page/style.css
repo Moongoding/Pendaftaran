@@ -1,0 +1,262 @@
+:root {
+    --primary: #74ddef;
+    --bg: #010101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: aliceblue;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #abf3fe;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: aliceblue;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color: aliceblue;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    transition: color 0.2s ease;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.1s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.7);
+}
+
+.navbar .navbar-extra a {
+    color: aliceblue;
+    margin: 0 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.navbar .navbar-extra #search-form {
+    color: aliceblue;
+    text-align: center;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra #search-form #search-input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fefefe;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/* Jumbotron */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('https://source.unsplash.com/700x500?lab');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(1, 1, 3, 1) 5%, rgba(255, 255, 255, 0) 30%);
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    padding-left: 5%;
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 5rem;
+    color: aliceblue;
+    text-shadow: 1px 1px 1px var(--primary);
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+    text-shadow: 1px 1px 1px var(--bg);
+}
+
+.hero .content p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgb(4, 35, 63);
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: rgb(3, 3, 3);
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 1px rgb(3, 3, 3);
+    transition: all 0.2s ease;
+}
+
+.hero .content .cta:hover {
+    font-weight: bold;
+    color: rgb(3, 3, 3);
+    background-color: #07fcec;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 1px rgb(3, 3, 3);
+}
+
+/* Tentang kami */
+.about,
+.menu,
+.contact {
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.contact h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span,
+.contact h2 span {
+    color: var(--primary);
+    text-shadow: 1px 1px 1px aliceblue;
+}
+
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .row .about-img {
+    flex: 1 1 45%;
+}
+
+.about .row .about-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about .row .content {
+    flex: 1 1 50%;
+    padding: 0;
+    margin-left: 5%;
+}
+
+.about .row .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Menu */
+.menu h2 {
+    margin-bottom: 1rem;
+}
+
+.menu p,
+.contact p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.menu .row .menu-card {
+    text-align: center;
+    padding-bottom: 4rem;
+    flex: 1 1 30%;
+    margin: 1rem;
+}
+
+.menu .row .menu-card img {
+    border-radius: 50%;
+    width: 80%;
+    object-position: center;
+}
